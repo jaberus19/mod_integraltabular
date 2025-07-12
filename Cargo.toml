@@ -1,0 +1,17 @@
+[package]
+name = "firstproject"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# Para la interfaz web con yew
+yew = { version = "0.21", features = ["csr"] }
+
+
+# Para cálculos matemáticos
+nalgebra = "0.32"  # Si necesitas cálculos numéricos
+symrs = "0.1.0"      # Si decides trabajar con álgebra simbólica
+
+# Para manejar JSON en la comunicación
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
