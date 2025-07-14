@@ -10,7 +10,8 @@ yew = { version = "0.21", features = ["csr"] }
 
 # Para cálculos matemáticos
 nalgebra = "0.32"  # Si necesitas cálculos numéricos
-symrs = "0.1.0"      # Si decides trabajar con álgebra simbólica
+# Álgebra simbólica desde GitHub
+symrs = { git = "https://github.com/peng1999/symrs.git", version = "0.*" }
 
 # Para manejar JSON en la comunicación
 serde = { version = "1.0", features = ["derive"] }
