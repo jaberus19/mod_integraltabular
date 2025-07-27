@@ -7,11 +7,8 @@ edition = "2024"
 # Para la interfaz web con yew
 yew = { version = "0.21", features = ["csr"] }
 
-
-# Para cálculos matemáticos
-nalgebra = "0.32"  # Si necesitas cálculos numéricos
-# Álgebra simbólica desde GitHub
-symrs = { git = "https://github.com/peng1999/symrs.git", version = "0.*" }
+regex ="1.11.1"
+once_cell ="1.x"
 
 # Para manejar JSON en la comunicación
 serde = { version = "1.0", features = ["derive"] }
