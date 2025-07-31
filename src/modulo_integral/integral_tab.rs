@@ -63,6 +63,29 @@ use crate::modulo_integral::tipos::TabularIntegral;
 
             self 
         }
+
+        pub fn componer_integral(&mut self) -> &mut Self{
+            let mut i = 0;
+            let sign:[char;2] =['+','-'];
+            self.resultado_integral_final= String::new();
+            loop {
+                if i + 1 >= self.integrales.len() {
+                    break;
+                }
+
+                if self.derivadas[i]=="0" {
+                    break
+                }
+
+                let formatted_term = format!("({}{}{})",sign[i%2],self.derivadas[i],self.integrales[i+1]);
+                self.resultado_integral_final.push_str(&formatted_term);
+                i += 1;
+                
+                
+            }
+            self
+        }
+
     }    
   
 

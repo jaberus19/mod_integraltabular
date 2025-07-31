@@ -1,7 +1,6 @@
 mod modulo_integral;
 use modulo_integral::tipos::{TabularIntegral};
-
-
+use firstproject::establish_connection;
 
 fn main() {
     println!("--- Iniciando Generación de Tabla de Integración por Partes ---");
@@ -22,6 +21,7 @@ fn main() {
             dv: dv_initial_str.to_string(), // Asigna 'dv' de la expresión
             derivadas: Vec::new(),          // Vacío, se llenará
             integrales: Vec::new(),         // Vacío, se llenará
+            resultado_integral_final: String::new(),
         };
 
         println!("\nGenerando tabla...");
@@ -34,14 +34,20 @@ fn main() {
         // Finalmente, imprimimos la tabla generada.
         tabla.imprimir_tabla();
 
+        tabla.componer_integral();
+       println!("Resultado de la integral: {}",tabla.resultado_integral_final);
+
     } else {
         // Si la expresión no contiene un '*', no podemos separarla y mostramos un error.
         eprintln!("Error: La expresión '{}' no contiene un '*' para separar los factores u y dv. No se puede generar la tabla.", full_expression);
     }
 
     println!("\n--- Generación de Tabla Finalizada ---");
+
+   
     
-    
+    let _connexion = &mut establish_connection();
+    println!("conexion establecida");
 
 
 }

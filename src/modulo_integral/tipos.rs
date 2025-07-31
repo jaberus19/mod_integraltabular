@@ -19,12 +19,13 @@ pub enum TipoFuncionIntegral {
     Cero,
     DesconocidaIntegral,
 }
-
+#[derive(Debug)]
  pub struct TabularIntegral{
        pub u: String,
        pub dv: String,
        pub derivadas: Vec<String>,  
        pub integrales: Vec<String>,
+       pub resultado_integral_final: String,
     }
 
     
